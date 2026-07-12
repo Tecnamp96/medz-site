@@ -18,6 +18,9 @@ body {
 a { color: #B87E0F; }
 a:hover { color: #8F6006; }
 img { max-width: 100%; }
+/* width/height attributes are CLS hints only — layout is CSS-driven
+   (without this, the height attribute defeats the aspect-ratio rules) */
+.work-shot img, .about-portrait, .memorial-photo { height: auto; }
 
 :focus-visible { outline: 2px solid #B87E0F; outline-offset: 3px; }
 
@@ -470,6 +473,106 @@ h1 em, h2 em { font-style: italic; color: #B87E0F; }
 }
 
 /* ============================================================
+   Case-study pages (work/*.html) — same Ivory system
+   ============================================================ */
+.case-hero { padding: 170px 8vw 64px; max-width: 1400px; margin: 0 auto; box-sizing: border-box; }
+.case-kicker-row {
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 22px;
+  font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase;
+}
+.case-kicker-row .kicker { margin-bottom: 0; }
+.case-status { color: rgba(26,24,21,0.5); letter-spacing: 0.16em; }
+.case-status--live { color: #4C7A3D; }
+.case-hero h1 {
+  font-family: 'Sentient', serif; font-weight: 400;
+  font-size: clamp(42px, 5.6vw, 84px); line-height: 1.05; letter-spacing: -0.02em;
+  margin: 0; color: #1A1815; max-width: 16ch; text-wrap: balance;
+}
+.case-quote {
+  font-family: 'Sentient', serif; font-weight: 400; font-style: italic;
+  font-size: clamp(19px, 2vw, 26px); line-height: 1.4; color: rgba(26,24,21,0.75);
+  margin: 26px 0 0; max-width: 34ch; text-wrap: balance;
+}
+.case-cta-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 36px; }
+.case-url { font-size: 14px; color: rgba(26,24,21,0.55); }
+.case-shot { padding: 0 8vw; max-width: 1400px; margin: 0 auto; box-sizing: border-box; }
+.case-meta {
+  padding: 44px 8vw 0; max-width: 1400px; margin: 0 auto; box-sizing: border-box;
+}
+.case-meta-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+  padding: 30px 0; border-top: 1px solid rgba(26,24,21,0.12); border-bottom: 1px solid rgba(26,24,21,0.12);
+}
+.case-meta-label {
+  font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: rgba(26,24,21,0.5); margin-bottom: 10px;
+}
+.case-meta-value { font-size: 16px; color: #1A1815; }
+.case-meta-value--amber { color: #B87E0F; }
+.case-story {
+  padding: 80px 8vw 0; max-width: 1400px; margin: 0 auto; box-sizing: border-box;
+  display: flex; flex-direction: column; gap: 64px;
+}
+.g-story { display: grid; grid-template-columns: 0.4fr 1fr; gap: 48px; align-items: start; }
+.case-story .kicker { padding-top: 6px; margin-bottom: 0; }
+.case-story-text {
+  font-weight: 300; font-size: clamp(18px, 1.9vw, 23px); line-height: 1.6;
+  color: rgba(26,24,21,0.82); max-width: 48ch;
+}
+.case-list {
+  list-style: none; margin: 26px 0 0; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 13px 32px;
+  font-size: 16px; color: rgba(26,24,21,0.75);
+}
+.case-list li { display: flex; gap: 11px; }
+.case-list li > span { color: #B87E0F; }
+.case-result { padding: 84px 8vw 0; max-width: 1400px; margin: 0 auto; box-sizing: border-box; }
+.case-result-card {
+  background: #FDFBF6; border: 1px solid rgba(26,24,21,0.12); border-radius: 2px;
+  padding: clamp(36px, 5vw, 60px);
+  box-shadow: 0 30px 60px -40px rgba(26,24,21,0.4);
+}
+.case-result-card h2 {
+  font-family: 'Sentient', serif; font-weight: 400;
+  font-size: clamp(26px, 3.2vw, 44px); line-height: 1.12; letter-spacing: -0.015em;
+  margin: 0; max-width: 22ch; text-wrap: balance;
+}
+.case-result-card p {
+  font-weight: 300; font-size: 18px; line-height: 1.65;
+  color: rgba(26,24,21,0.75); margin: 20px 0 0; max-width: 52ch;
+}
+.case-cta {
+  padding: 96px 8vw 110px; max-width: 1400px; margin: 0 auto; box-sizing: border-box;
+}
+.case-cta-band {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 40px; flex-wrap: wrap; padding-bottom: 56px;
+  border-bottom: 1px solid rgba(26,24,21,0.12);
+}
+.case-cta-band h2 {
+  font-family: 'Sentient', serif; font-weight: 400;
+  font-size: clamp(26px, 3.2vw, 42px); line-height: 1.12; letter-spacing: -0.015em;
+  margin: 0 0 12px; max-width: 20ch; text-wrap: balance;
+}
+.case-cta-band p { font-weight: 300; font-size: 17px; color: rgba(26,24,21,0.7); margin: 0; }
+.case-next { display: flex; gap: 26px; margin-top: 36px; flex-wrap: wrap; }
+.case-next a {
+  font-size: 15px; color: rgba(26,24,21,0.7); text-decoration: none;
+  display: inline-flex; align-items: center; gap: 8px; transition: color .2s;
+}
+.case-next a:hover { color: #B87E0F; }
+
+@media (max-width: 900px) {
+  .case-meta-grid { grid-template-columns: 1fr 1fr; }
+  .g-story { grid-template-columns: 1fr; gap: 16px; }
+  .case-list { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .case-hero { padding: 140px 5vw 48px; }
+  .case-shot, .case-meta, .case-story, .case-result, .case-cta { padding-left: 5vw; padding-right: 5vw; }
+}
+
+/* ============================================================
    Motion layer — soft entrances, magnetic headings, parallax.
    Hidden states are gated on the .js root class so the page is
    fully visible without JavaScript; reduced-motion gets no motion.
@@ -497,7 +600,8 @@ h1 em, h2 em { font-style: italic; color: #B87E0F; }
 }
 
 /* magnetic headings — JS drives --mx/--my; transition gives the spring */
-h1, .sec-head h2, .about-title, .book-title {
+h1, .sec-head h2, .about-title, .book-title,
+.case-result-card h2, .case-cta-band h2 {
   transform: translate(var(--mx, 0px), var(--my, 0px));
   transition: transform .45s cubic-bezier(.2,.7,.2,1);
 }

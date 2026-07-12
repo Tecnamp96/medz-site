@@ -79,7 +79,7 @@
      Headings drift a few px toward the cursor; the CSS transition
      on transform provides the spring back. */
   if (finePointer && !reducedMotion) {
-    var heads = document.querySelectorAll('h1, .sec-head h2, .about-title, .book-title');
+    var heads = document.querySelectorAll('h1, .sec-head h2, .about-title, .book-title, .case-result-card h2, .case-cta-band h2');
     var MAX = 6;
     Array.prototype.forEach.call(heads, function (h) {
       h.addEventListener('pointermove', function (e) {

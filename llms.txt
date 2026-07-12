@@ -20,5 +20,5 @@ All packages are delivered one week from outline approval. Free 30-minute consul
 
 - [Homepage](https://medzsite.netlify.app/): services, pricing, about Robert, contact form
 - [Integrity NZ case study](https://medzsite.netlify.app/work/integrity-nz.html): website for a civic movement
-- [Back for the Future case study](https://medzsite.netlify.app/work/back-for-the-future.html): physiotherapy clinic website redesign
+- [Counterspun Media case study](https://medzsite.netlify.app/work/counterspun-media.html): Robert's own independent media platform (counterspunmedia.co.nz)
 - [Confetti Road case study](https://medzsite.netlify.app/work/confetti-road.html): wedding and events hire website (in client review)
