@@ -1,5 +1,5 @@
 /* ============================================================
-   Medz Web Services — "Noir" homepage behaviour
+   Medz Web Services — "Ivory" homepage behaviour
    Progressive enhancement only: the page reads fine without JS
    (the nav simply stays in its expanded state).
    Per the design spec: no cursor customization, no scroll reveals.
