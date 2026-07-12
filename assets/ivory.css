@@ -100,15 +100,15 @@ h1 em, h2 em { font-style: italic; color: #B87E0F; }
 .hero-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
 .hero-bg img {
   position: absolute; left: 0; top: -15%; width: 100%; height: 130%;
-  object-fit: cover; object-position: 50% 38%; opacity: 0.2;
+  object-fit: cover; object-position: 50% 38%; opacity: 0.32;
   will-change: transform;
 }
 .hero-bg::after {
   content: ''; position: absolute; inset: 0;
   background: linear-gradient(180deg,
-    rgba(244,239,229,0.15) 0%,
-    rgba(244,239,229,0.05) 40%,
-    rgba(244,239,229,0.55) 82%,
+    rgba(244,239,229,0.08) 0%,
+    rgba(244,239,229,0.02) 55%,
+    rgba(244,239,229,0.4) 90%,
     #F4EFE5 100%);
 }
 .hero-inner { position: relative; z-index: 1; max-width: 1200px; }
@@ -157,17 +157,23 @@ h1 em, h2 em { font-style: italic; color: #B87E0F; }
 /* ---------- about ---------- */
 .g-about { display: grid; grid-template-columns: 0.85fr 1fr; gap: 80px; align-items: start; }
 
-.img-mask { overflow: hidden; border-radius: 2px; }
-.img-mask img { filter: saturate(1.05) contrast(1.02); }
-.mask-portrait, .mask-memorial { filter: drop-shadow(0 26px 44px rgba(26,24,21,0.18)); }
-.mask-portrait {
-  -webkit-mask-image: radial-gradient(120% 104% at 50% 36%, #000 58%, transparent 100%);
-  mask-image: radial-gradient(120% 104% at 50% 36%, #000 58%, transparent 100%);
+/* about photos: crisp framed edges with a soft layered shadow
+   (the prototype's radial fade masks are gone — Robert wants pop) */
+.img-mask {
+  overflow: hidden; border-radius: 2px;
+  border: 1px solid rgba(26,24,21,0.1);
+  box-shadow:
+    0 30px 60px -28px rgba(26,24,21,0.38),
+    0 12px 26px -14px rgba(26,24,21,0.22);
+  transition: box-shadow .45s cubic-bezier(.2,.7,.2,1), transform .45s cubic-bezier(.2,.7,.2,1);
 }
-.mask-memorial {
-  -webkit-mask-image: radial-gradient(128% 134% at 50% 42%, #000 50%, transparent 100%);
-  mask-image: radial-gradient(128% 134% at 50% 42%, #000 50%, transparent 100%);
+.img-mask:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 40px 75px -30px rgba(26,24,21,0.45),
+    0 16px 32px -14px rgba(26,24,21,0.25);
 }
+.img-mask img { filter: saturate(1.08) contrast(1.05); }
 .about-portrait {
   width: 100%; display: block; aspect-ratio: 4/4.4;
   object-fit: cover; object-position: 50% 28%;
@@ -250,10 +256,21 @@ h1 em, h2 em { font-style: italic; color: #B87E0F; }
   border: 1px solid rgba(244,239,229,0.16); border-radius: 2px;
   padding: 40px 34px; display: flex; flex-direction: column; gap: 22px;
   min-height: 520px; box-sizing: border-box;
+  box-shadow: 0 18px 40px -30px rgba(0,0,0,0.55);
+  transition: transform .45s cubic-bezier(.2,.7,.2,1), box-shadow .45s cubic-bezier(.2,.7,.2,1), border-color .3s;
+}
+.plan:hover {
+  transform: translateY(-6px);
+  border-color: rgba(244,239,229,0.3);
+  box-shadow: 0 34px 65px -30px rgba(0,0,0,0.7);
 }
 .plan--featured {
   position: relative; border-color: #E6A817; background: rgba(230,168,23,0.06);
   box-shadow: 0 24px 60px -30px rgba(230,168,23,0.3);
+}
+.plan--featured:hover {
+  border-color: #E6A817;
+  box-shadow: 0 38px 80px -32px rgba(230,168,23,0.45);
 }
 .plan-chip {
   position: absolute; top: -12px; left: 34px;
@@ -458,16 +475,26 @@ h1 em, h2 em { font-style: italic; color: #B87E0F; }
    fully visible without JavaScript; reduced-motion gets no motion.
    ============================================================ */
 
-/* soft entrances */
-.js [data-fade] {
-  opacity: 0; transform: translateY(24px);
-  transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1);
+/* soft entrances — one-shot keyframes rather than transitions, so
+   hover transforms on the same elements never fight the entrance */
+.js [data-fade] { opacity: 0; }
+.js [data-fade].in-view {
+  opacity: 1;
+  animation: fadeUp .9s cubic-bezier(.2,.7,.2,1) backwards;
 }
-.js [data-fade].in-view { opacity: 1; transform: none; }
-.js [data-fade-delay="1"] { transition-delay: .12s; }
-.js [data-fade-delay="2"] { transition-delay: .24s; }
-.js .img-mask[data-fade] img { transform: scale(1.05); transition: transform 1.3s cubic-bezier(.2,.7,.2,1), filter .5s; }
-.js .img-mask[data-fade].in-view img { transform: scale(1); }
+.js [data-fade-delay="1"].in-view { animation-delay: .12s; }
+.js [data-fade-delay="2"].in-view { animation-delay: .24s; }
+.js .img-mask[data-fade].in-view img {
+  animation: settleIn 1.3s cubic-bezier(.2,.7,.2,1) backwards;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes settleIn {
+  from { transform: scale(1.05); }
+  to   { transform: none; }
+}
 
 /* magnetic headings — JS drives --mx/--my; transition gives the spring */
 h1, .sec-head h2, .about-title, .book-title {
@@ -487,8 +514,8 @@ h1 em, h2 em {
 h1:hover em, h2:hover em { background-size: 100% 2px; }
 
 @media (prefers-reduced-motion: reduce) {
-  .js [data-fade] { opacity: 1 !important; transform: none !important; }
-  .js .img-mask[data-fade] img { transform: none !important; }
+  .js [data-fade] { opacity: 1 !important; transform: none !important; animation: none !important; }
+  .js .img-mask[data-fade] img { transform: none !important; animation: none !important; }
   h1, .sec-head h2, .about-title, .book-title { transform: none !important; }
   .hero-bg img { transform: none !important; }
 }

@@ -49,7 +49,7 @@
       if (ticking) return;
       ticking = true;
       requestAnimationFrame(function () {
-        heroImg.style.transform = 'translate3d(0,' + (window.scrollY * 0.3) + 'px,0)';
+        heroImg.style.transform = 'translate3d(0,' + (window.scrollY * 0.18) + 'px,0)';
         ticking = false;
       });
     };
