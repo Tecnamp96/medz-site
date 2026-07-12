@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tecnamp96.github.io/medz-site/sitemap.xml
+Sitemap: https://medzsite.netlify.app/sitemap.xml
