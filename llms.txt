@@ -1,0 +1,24 @@
+# Medz Web Services
+
+> One-person web studio in Whareora, Whangārei, Northland, New Zealand, run by Robert Perham. Builds websites for Northland small businesses, churches, and community organisations at flat rates, delivered one week from outline approval. Named in memory of Robert's daughter Merania ("Medz") Perham. Every build includes SEO and AI-search (AIO) optimisation.
+
+## Services and pricing (NZD, flat rate)
+
+- **Starter — $500**: single-page site, mobile responsive, contact form, SEO & AI-search optimisation, free Netlify hosting setup, custom domain connection. Best for sole traders, market stalls, small clubs, new businesses.
+- **Pro — $1,200**: up to 5 pages with full navigation, mobile responsive, full SEO & AI-search optimisation (meta, sitemap, structured data), contact form and Google Maps embed, social media links, custom domain.
+- **Custom — quoted per project**: e-commerce, booking integrations, larger organisations, complex needs. Scoped and priced after a free consult.
+
+All packages are delivered one week from outline approval. Free 30-minute consult, no obligation. Monthly payment plans available.
+
+## Contact
+
+- Phone: 027 347 5228 (+64 27 347 5228)
+- Enquiry form: https://medzsite.netlify.app/#book
+- Location: Whareora, Whangārei, Northland, New Zealand (serves all of Northland)
+
+## Pages
+
+- [Homepage](https://medzsite.netlify.app/): services, pricing, about Robert, contact form
+- [Integrity NZ case study](https://medzsite.netlify.app/work/integrity-nz.html): website for a civic movement
+- [Back for the Future case study](https://medzsite.netlify.app/work/back-for-the-future.html): physiotherapy clinic website redesign
+- [Confetti Road case study](https://medzsite.netlify.app/work/confetti-road.html): wedding and events hire website (in client review)
