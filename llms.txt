@@ -2,13 +2,13 @@
 
 > One-person web studio in Whareora, Whangārei, Northland, New Zealand, run by Robert Perham. Builds websites for Northland small businesses, churches, and community organisations at flat rates, delivered one week from outline approval. Named in memory of Robert's daughter Merania ("Medz") Perham. Every build includes SEO and AI-search (AIO) optimisation.
 
-## Services and pricing (NZD, flat rate)
+## Services and pricing (NZD, flat rate build + ongoing retainer)
 
-- **Starter — $500**: single-page site, mobile responsive, contact form, SEO & AI-search optimisation, free Netlify hosting setup, custom domain connection. Best for sole traders, market stalls, small clubs, new businesses.
-- **Pro — $1,200**: up to 5 pages with full navigation, mobile responsive, full SEO & AI-search optimisation (meta, sitemap, structured data), contact form and Google Maps embed, social media links, custom domain.
-- **Custom — quoted per project**: e-commerce, booking integrations, larger organisations, complex needs. Scoped and priced after a free consult.
+- **Starter — $750 build + $69/month**: single-page site, mobile responsive, contact form, SEO & AI-search optimisation, custom domain connection. Monthly retainer covers hosting and unlimited content edits, cancel anytime, no lock-in contract. Best for sole traders, market stalls, small clubs, new businesses.
+- **Pro — $1,800 build + $99/month**: up to 5 pages with full navigation, mobile responsive, full SEO & AI-search optimisation (meta, sitemap, structured data), contact form and Google Maps embed, social media links, custom domain. Same retainer terms as Starter.
+- **Custom — quoted per project**: e-commerce, booking integrations, larger organisations, complex needs. Scoped and priced after a free consult, including an ongoing hosting and edits retainer.
 
-All packages are delivered one week from outline approval. Free 30-minute consult, no obligation. Monthly payment plans available.
+All packages are delivered one week from outline approval. Free 30-minute consult, no obligation. The monthly retainer has no minimum term — cancel anytime; the site keeps running either way, you just lose the free ongoing edits.
 
 ## Contact
 
