@@ -211,7 +211,7 @@ h1 em, h2 em { font-style: italic; color: #B87E0F; }
 .about-copy p { margin: 0; }
 
 /* ---------- work ---------- */
-.work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
 .work-card { display: block; text-decoration: none; color: inherit; }
 .work-shot {
   overflow: hidden; border-radius: 2px;
@@ -592,6 +592,7 @@ h1 em, h2 em { font-style: italic; color: #B87E0F; }
 }
 .js [data-fade-delay="1"].in-view { animation-delay: .12s; }
 .js [data-fade-delay="2"].in-view { animation-delay: .24s; }
+.js [data-fade-delay="3"].in-view { animation-delay: .36s; }
 .js .img-mask[data-fade].in-view img {
   animation: settleIn 1.3s cubic-bezier(.2,.7,.2,1) backwards;
 }
