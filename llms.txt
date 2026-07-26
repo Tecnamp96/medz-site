@@ -13,12 +13,12 @@ All packages are delivered one week from outline approval. Free 30-minute consul
 ## Contact
 
 - Phone: 027 347 5228 (+64 27 347 5228)
-- Enquiry form: https://medzsite.netlify.app/#book
+- Enquiry form: https://medzwebservices.co.nz/#book
 - Location: Whareora, Whangārei, Northland, New Zealand (serves all of Northland)
 
 ## Pages
 
-- [Homepage](https://medzsite.netlify.app/): services, pricing, about Robert, contact form
-- [Integrity NZ case study](https://medzsite.netlify.app/work/integrity-nz.html): website for a civic movement
-- [Counterspun Media case study](https://medzsite.netlify.app/work/counterspun-media.html): Robert's own independent media platform (counterspunmedia.co.nz)
-- [Confetti Road case study](https://medzsite.netlify.app/work/confetti-road.html): wedding and events hire website (in client review)
+- [Homepage](https://medzwebservices.co.nz/): services, pricing, about Robert, contact form
+- [Integrity NZ case study](https://medzwebservices.co.nz/work/integrity-nz): website for a civic movement
+- [Counterspun Media case study](https://medzwebservices.co.nz/work/counterspun-media): Robert's own independent media platform (counterspunmedia.co.nz)
+- [Confetti Road case study](https://medzwebservices.co.nz/work/confetti-road): wedding and events hire website (in client review)

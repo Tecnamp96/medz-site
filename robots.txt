@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://medzsite.netlify.app/sitemap.xml
+Sitemap: https://medzwebservices.co.nz/sitemap.xml
