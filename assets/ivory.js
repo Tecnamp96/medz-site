@@ -96,4 +96,26 @@
     });
   }
 
+  /* ---------- analytics: contact intent ---------- */
+  if (typeof window.gtag === 'function') {
+    Array.prototype.forEach.call(document.querySelectorAll('a[href^="tel:"]'), function (link) {
+      link.addEventListener('click', function () {
+        window.gtag('event', 'phone_click', {
+          event_category: 'contact',
+          event_label: link.getAttribute('href')
+        });
+      });
+    });
+
+    Array.prototype.forEach.call(document.querySelectorAll('form.enquiry-form'), function (form) {
+      form.addEventListener('submit', function () {
+        window.gtag('event', 'generate_lead', {
+          event_category: 'contact',
+          event_label: 'enquiry_form_submit',
+          transport_type: 'beacon'
+        });
+      });
+    });
+  }
+
 })();
