@@ -1,8 +1,8 @@
 /* ============================================================
-   Medz Web Services — "Ivory" homepage stylesheet
+   Medz Web Services â€” "Ivory" homepage stylesheet
    Recreated from the Claude Design file "Medz Homepage A - Ivory",
-   July 2026. Palette: bg #F4EFE5 · ink #1A1815 · amber #B87E0F
-   (hover #8F6006) · bright amber #E6A817 (dark section) ·
+   July 2026. Palette: bg #F4EFE5 Â· ink #1A1815 Â· amber #B87E0F
+   (hover #8F6006) Â· bright amber #E6A817 (dark section) Â·
    rose #C4707F (memorial, light bg) / #FDA4AF (dark section).
    Serif headings: Sentient. Pill buttons, 2px image radius.
    ============================================================ */
@@ -18,7 +18,7 @@ body {
 a { color: #B87E0F; }
 a:hover { color: #8F6006; }
 img { max-width: 100%; }
-/* width/height attributes are CLS hints only — layout is CSS-driven
+/* width/height attributes are CLS hints only â€” layout is CSS-driven
    (without this, the height attribute defeats the aspect-ratio rules) */
 .work-shot img, .about-portrait, .memorial-photo { height: auto; }
 
@@ -89,7 +89,7 @@ h1 em, h2 em { font-style: italic; color: #B87E0F; }
 .btn-pill--big { font-size: 16px; padding: 18px 32px; }
 .cta-arrow { font-size: 18px; line-height: 1; }
 
-/* hamburger — hidden on desktop */
+/* hamburger â€” hidden on desktop */
 .nav-toggle { display: none; }
 .mobile-only { display: none; }
 
@@ -161,7 +161,7 @@ h1 em, h2 em { font-style: italic; color: #B87E0F; }
 .g-about { display: grid; grid-template-columns: 0.85fr 1fr; gap: 80px; align-items: start; }
 
 /* about photos: crisp framed edges with a soft layered shadow
-   (the prototype's radial fade masks are gone — Robert wants pop) */
+   (the prototype's radial fade masks are gone â€” Robert wants pop) */
 .img-mask {
   overflow: hidden; border-radius: 2px;
   border: 1px solid rgba(26,24,21,0.1);
@@ -324,6 +324,44 @@ h1 em, h2 em { font-style: italic; color: #B87E0F; }
 }
 .pricing-note a { color: #E6A817; text-decoration: none; }
 
+.pay-monthly {
+  margin: 34px auto 0; max-width: 1080px;
+  display: grid; grid-template-columns: minmax(0, 1fr) 390px; gap: 34px;
+  padding: clamp(28px, 4vw, 46px);
+  border: 1px solid rgba(230,168,23,0.28); border-radius: 2px;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(230,168,23,0.14), transparent 42%),
+    rgba(244,239,229,0.045);
+  box-shadow: 0 32px 80px -54px rgba(230,168,23,0.55), 0 18px 50px -34px rgba(0,0,0,0.8);
+}
+.pay-monthly-kicker {
+  font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: #E6A817; margin-bottom: 12px;
+}
+.pay-monthly h3 {
+  font-family: 'Sentient', serif; font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.06; font-weight: 400; margin: 0 0 14px; color: #F4EFE5;
+}
+.pay-monthly p {
+  margin: 0; color: rgba(244,239,229,0.72); line-height: 1.65; font-size: 16px;
+}
+.pay-monthly-options {
+  display: grid; gap: 12px; align-content: center;
+}
+.pay-monthly-options div {
+  padding: 16px 18px; border: 1px solid rgba(244,239,229,0.14);
+  background: rgba(26,24,21,0.32); box-shadow: inset 0 1px 0 rgba(244,239,229,0.04);
+}
+.pay-monthly-options strong {
+  display: block; font-weight: 500; color: #F4EFE5; margin-bottom: 6px;
+}
+.pay-monthly-options span {
+  display: block; color: #E6A817; font-size: 15px;
+}
+.pay-monthly-small {
+  grid-column: 1 / -1; padding-top: 18px; border-top: 1px solid rgba(244,239,229,0.1);
+  font-size: 13.5px !important; color: rgba(244,239,229,0.58) !important;
+}
 /* ---------- testimonials ---------- */
 .t-note {
   font-size: 14px; color: rgba(26,24,21,0.45); margin: 0 0 48px; font-style: italic;
@@ -412,7 +450,7 @@ h1 em, h2 em { font-style: italic; color: #B87E0F; }
 }
 
 /* ============================================================
-   Responsive — grids collapse ~900px, nav collapses ~760px
+   Responsive â€” grids collapse ~900px, nav collapses ~760px
    ============================================================ */
 @media (max-width: 980px) {
   .work-grid { grid-template-columns: repeat(2, 1fr); }
@@ -471,14 +509,14 @@ h1 em, h2 em { font-style: italic; color: #B87E0F; }
 }
 
 @media (max-width: 430px) {
-  /* not enough room for the standalone CTA next to the hamburger —
+  /* not enough room for the standalone CTA next to the hamburger â€”
      "Get in Touch" lives inside the menu panel instead (.mobile-only) */
   .nav-right > .btn-pill--nav { display: none; }
   .contact-card { padding: 28px 20px; }
 }
 
 /* ============================================================
-   Case-study pages (work/*.html) — same Ivory system
+   Case-study pages (work/*.html) â€” same Ivory system
    ============================================================ */
 .case-hero { padding: 170px 8vw 64px; max-width: 1400px; margin: 0 auto; box-sizing: border-box; }
 .case-kicker-row {
@@ -577,13 +615,60 @@ h1 em, h2 em { font-style: italic; color: #B87E0F; }
   .case-shot, .case-meta, .case-story, .case-result, .case-cta { padding-left: 5vw; padding-right: 5vw; }
 }
 
+.form-privacy {
+  margin: 14px 0 0; font-size: 13px; line-height: 1.55;
+  color: rgba(26,24,21,0.55);
+}
+.form-privacy a { color: #B87E0F; text-decoration: none; }
+.form-privacy a:hover { color: #8F6006; }
+.pricing-note span {
+  display: inline-block; margin-top: 8px; font-size: 13px;
+  color: rgba(244,239,229,0.56);
+}
+.footer-note a { color: rgba(26,24,21,0.62); text-decoration: none; }
+.footer-note a:hover { color: #B87E0F; }
+.legal-main {
+  padding: 150px 8vw 90px; max-width: 980px; margin: 0 auto;
+  color: #1A1815;
+}
+.legal-kicker {
+  font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: #B87E0F; margin-bottom: 18px;
+}
+.legal-main h1 {
+  font-family: 'Sentient', serif; font-weight: 400;
+  font-size: clamp(40px, 6vw, 72px); line-height: 1.04;
+  letter-spacing: -0.02em; margin: 0 0 20px; max-width: 12ch;
+}
+.legal-updated { color: rgba(26,24,21,0.55); margin: 0 0 46px; }
+.legal-body {
+  background: #FDFBF6; border: 1px solid rgba(26,24,21,0.1); border-radius: 2px;
+  padding: clamp(28px, 5vw, 56px);
+  box-shadow: 0 34px 70px -52px rgba(26,24,21,0.42);
+}
+.legal-body h2 {
+  font-family: 'Sentient', serif; font-weight: 400;
+  font-size: clamp(24px, 2.6vw, 34px); line-height: 1.15;
+  margin: 44px 0 14px; color: #1A1815;
+}
+.legal-body h2:first-child { margin-top: 0; }
+.legal-body p, .legal-body li {
+  font-size: 16px; line-height: 1.75; color: rgba(26,24,21,0.76);
+}
+.legal-body ul, .legal-body ol { padding-left: 22px; }
+.legal-body a { color: #B87E0F; text-decoration: none; }
+.legal-note {
+  padding: 18px 20px; border-left: 3px solid #B87E0F;
+  background: rgba(184,126,15,0.08); color: rgba(26,24,21,0.72);
+}
+
 /* ============================================================
-   Motion layer — soft entrances, magnetic headings, parallax.
+   Motion layer â€” soft entrances, magnetic headings, parallax.
    Hidden states are gated on the .js root class so the page is
    fully visible without JavaScript; reduced-motion gets no motion.
    ============================================================ */
 
-/* soft entrances — one-shot keyframes rather than transitions, so
+/* soft entrances â€” one-shot keyframes rather than transitions, so
    hover transforms on the same elements never fight the entrance */
 .js [data-fade] { opacity: 0; }
 .js [data-fade].in-view {
@@ -605,7 +690,7 @@ h1 em, h2 em { font-style: italic; color: #B87E0F; }
   to   { transform: none; }
 }
 
-/* magnetic headings — JS drives --mx/--my; transition gives the spring */
+/* magnetic headings â€” JS drives --mx/--my; transition gives the spring */
 h1, .sec-head h2, .about-title, .book-title,
 .case-result-card h2, .case-cta-band h2 {
   transform: translate(var(--mx, 0px), var(--my, 0px));
@@ -629,3 +714,5 @@ h1:hover em, h2:hover em { background-size: 100% 2px; }
   h1, .sec-head h2, .about-title, .book-title { transform: none !important; }
   .hero-bg img { transform: none !important; }
 }
+
+
