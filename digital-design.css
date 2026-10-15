@@ -116,6 +116,11 @@
   object-fit: cover;
 }
 
+.digital-design-image--full-art {
+  object-fit: contain;
+  background: #111312;
+}
+
 .digital-gallery figcaption {
   padding: 12px 14px 13px;
   color: #4d574b;
