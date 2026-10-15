@@ -13,20 +13,41 @@
 .brand img{height:auto;aspect-ratio:1}
 @media(max-width:360px){.nav nav{gap:12px}.nav .contact{font-size:12px}.nav .contact span{margin-left:4px}.brand{gap:8px}.brand-small{letter-spacing:1px}.actions{gap:14px}}
 .hidden-field{display:none}
+.text-highlight {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  border-radius: 0.04em;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.text-highlight em {
+  transition: color 0.2s ease;
+}
+
+/* Keep the price's existing small fee label separate from the amount. */
+.price > .text-highlight {
+  display: inline;
+  font: inherit;
+  letter-spacing: inherit;
+  margin: 0;
+}
+
 @media (hover: hover) and (pointer: fine) {
   :where(h1, h2, h3, .eyebrow, .plan-number, .price, .digital-tier, .digital-price, .category) {
-    width: fit-content;
-    max-width: 100%;
-    background-image: linear-gradient(transparent 68%, var(--yellow) 68%, #ffe27a 91%, transparent 91%);
-    background-repeat: repeat-y;
-    background-position: left bottom;
-    background-size: 0 1lh;
-    transition: background-size 0.38s ease, transform 0.24s ease;
+    transition: transform 0.24s ease;
   }
 
   :where(h1, h2, h3, .eyebrow, .plan-number, .price, .digital-tier, .digital-price, .category):hover {
-    background-size: 100% 1lh;
     transform: translateY(-3px);
+  }
+
+  :where(h1, h2, h3, .eyebrow, .plan-number, .price, .digital-tier, .digital-price, .category):hover > .text-highlight {
+    background-color: var(--yellow);
+    color: var(--ink);
+  }
+
+  :where(h1, h2, h3, .eyebrow, .plan-number, .price, .digital-tier, .digital-price, .category):hover > .text-highlight em {
+    color: var(--ink);
   }
 }
 
@@ -41,7 +62,6 @@
   }
 
   :where(h1, h2, h3, .eyebrow, .plan-number, .price, .digital-tier, .digital-price, .category):hover {
-    background-size: 100% 1lh;
     transform: none;
   }
 }
