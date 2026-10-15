@@ -13,15 +13,10 @@
 .brand img{height:auto;aspect-ratio:1}
 @media(max-width:360px){.nav nav{gap:12px}.nav .contact{font-size:12px}.nav .contact span{margin-left:4px}.brand{gap:8px}.brand-small{letter-spacing:1px}.actions{gap:14px}}
 .hidden-field{display:none}
-.text-highlight {
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+.word-highlight {
+  display: inline-block;
   border-radius: 0.04em;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.text-highlight em {
-  transition: color 0.2s ease;
+  transition: transform 0.16s ease;
 }
 
 /* Keep the price's existing small fee label separate from the amount. */
@@ -32,22 +27,18 @@
   margin: 0;
 }
 
+.price .word-highlight {
+  display: inline-block;
+  font: inherit;
+  letter-spacing: inherit;
+  margin: 0;
+}
+
 @media (hover: hover) and (pointer: fine) {
-  :where(h1, h2, h3, .eyebrow, .plan-number, .price, .digital-tier, .digital-price, .category) {
-    transition: transform 0.24s ease;
-  }
-
-  :where(h1, h2, h3, .eyebrow, .plan-number, .price, .digital-tier, .digital-price, .category):hover {
-    transform: translateY(-3px);
-  }
-
-  :where(h1, h2, h3, .eyebrow, .plan-number, .price, .digital-tier, .digital-price, .category):hover > .text-highlight {
+  .word-highlight:hover {
     background-color: var(--yellow);
     color: var(--ink);
-  }
-
-  :where(h1, h2, h3, .eyebrow, .plan-number, .price, .digital-tier, .digital-price, .category):hover > .text-highlight em {
-    color: var(--ink);
+    transform: translateY(-2px);
   }
 }
 
@@ -57,11 +48,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  :where(h1, h2, h3, .eyebrow, .plan-number, .price, .digital-tier, .digital-price, .category) {
+  .word-highlight {
     transition: none;
   }
 
-  :where(h1, h2, h3, .eyebrow, .plan-number, .price, .digital-tier, .digital-price, .category):hover {
+  .word-highlight:hover {
     transform: none;
   }
 }
