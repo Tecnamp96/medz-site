@@ -15,7 +15,7 @@
 .hidden-field{display:none}
 .word-highlight {
   display: inline-block;
-  border-radius: 0.04em;
+  border-radius: 0.2em;
   transition: transform 0.16s ease;
 }
 
@@ -36,7 +36,7 @@
 
 @media (hover: hover) and (pointer: fine) {
   .word-highlight:hover {
-    background-color: var(--yellow);
+    background-color: #e7d5a0;
     color: var(--ink);
     transform: translateY(-2px);
   }
