@@ -13,3 +13,22 @@
 .brand img{height:auto;aspect-ratio:1}
 @media(max-width:360px){.nav nav{gap:12px}.nav .contact{font-size:12px}.nav .contact span{margin-left:4px}.brand{gap:8px}.brand-small{letter-spacing:1px}.actions{gap:14px}}
 .hidden-field{display:none}
+@media (hover: hover) and (pointer: fine) {
+  :where(h1, h2, h3, .eyebrow, .plan-number, .digital-tier, .digital-price, .category) {
+    transition: text-shadow 0.2s ease;
+  }
+
+  :where(h1, h2, h3, .eyebrow, .plan-number, .digital-tier, .digital-price, .category):hover {
+    text-shadow: 0 0 8px rgba(242, 189, 53, 0.42), 0 0 20px rgba(242, 189, 53, 0.2);
+  }
+}
+
+:where(a, button):focus-visible {
+  text-shadow: 0 0 8px rgba(242, 189, 53, 0.42), 0 0 20px rgba(242, 189, 53, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(h1, h2, h3, .eyebrow, .plan-number, .digital-tier, .digital-price, .category) {
+    transition: none;
+  }
+}
